@@ -24,3 +24,6 @@ class Library:
             book['available'] = True
             return True
         return False
+    
+    def view_available_books(self):
+        return [book for book in self.books.values() if book.get('available', True)]
