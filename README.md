@@ -24,3 +24,7 @@ A simple library management system implemented in Python, developed with a focus
 4. **Running Test**
    ```bash
    pytest
+5. **Generate test report**
+   ```bash
+   pytest --html=report.html
+   
