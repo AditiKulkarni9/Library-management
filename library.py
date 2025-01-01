@@ -17,3 +17,10 @@ class Library:
             book['available'] = False
             return True
         return False
+    
+    def return_book(self, isbn):
+        book = self.books.get(isbn)
+        if book and not book.get('available', True):
+            book['available'] = True
+            return True
+        return False
