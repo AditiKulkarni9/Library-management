@@ -10,3 +10,10 @@ class Library:
 
     def get_book(self, isbn):
         return self.books.get(isbn)
+    
+    def borrow_book(self, isbn):
+        book = self.books.get(isbn)
+        if book and book.get('available', True):
+            book['available'] = False
+            return True
+        return False
